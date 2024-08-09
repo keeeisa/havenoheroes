@@ -23,10 +23,7 @@ a {
   padding-right: 5vw;
   display: flex;
   position: fixed;
-  top: 0%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 0% 0% auto;
 }
 
 .menu {
@@ -99,19 +96,21 @@ a {
 .hero-container {
   flex-direction: column;
   align-items: center;
-  width: 50vh;
+  width: 70vh;
   display: flex;
 }
 
 .hero-logo {
   width: 100%;
+  display: none;
 }
 
 .punchline {
   text-align: center;
   text-transform: uppercase;
-  padding-top: 4vh;
-  font-size: 1.5vw;
+  padding-top: 0;
+  padding-bottom: 4vh;
+  font-size: 3vw;
   font-weight: 300;
   line-height: 110%;
 }
@@ -134,6 +133,7 @@ a {
 
 .p.full {
   width: 100%;
+  margin-bottom: 0;
   font-size: .9vw;
 }
 
@@ -152,10 +152,7 @@ a {
   width: 32%;
   margin-left: 0;
   position: absolute;
-  top: 4%;
-  bottom: auto;
-  left: 34%;
-  right: 0%;
+  inset: 4% 0% auto 34%;
 }
 
 .p.merch-card {
@@ -165,6 +162,7 @@ a {
 
 .div-block-2 {
   align-items: flex-end;
+  height: 68vh;
   margin-bottom: 7vw;
   display: flex;
 }
@@ -177,6 +175,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   margin-top: 119px;
+  margin-bottom: 0;
   font-size: 4vw;
   font-weight: 400;
   line-height: 110%;
@@ -188,7 +187,9 @@ a {
 }
 
 .image {
+  flex: none;
   width: 50%;
+  height: auto;
 }
 
 .full-width-container {
@@ -221,10 +222,12 @@ a {
 }
 
 .image-2 {
+  flex: none;
   width: 17%;
 }
 
 .image-3 {
+  flex: none;
   width: 25%;
 }
 
@@ -237,10 +240,7 @@ a {
   width: 100%;
   height: 1px;
   position: absolute;
-  top: 43%;
-  bottom: auto;
-  left: 0%;
-  right: 0%;
+  inset: 43% 0% auto;
 }
 
 .youtube {
@@ -305,10 +305,7 @@ a {
 .link-block-2 {
   z-index: 99;
   position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
+  inset: 0%;
 }
 
 .merch-card {
@@ -337,8 +334,8 @@ a {
 }
 
 .navbar-2 {
-  color: rgba(227, 227, 227, 0);
-  background-color: rgba(221, 221, 221, .27);
+  color: #e3e3e300;
+  background-color: #dddddd45;
 }
 
 .container-2 {
@@ -353,6 +350,12 @@ a {
   display: none;
 }
 
+.button {
+  background-color: #da403f;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
 @media screen and (max-width: 991px) {
   .menu {
     display: none;
@@ -364,12 +367,10 @@ a {
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
+    inset: 0%;
+    overflow: visible;
   }
 
   .main-menu {
@@ -390,7 +391,7 @@ a {
   }
 
   .hero-container {
-    width: 80vw;
+    width: 50vw;
   }
 
   .punchline {
@@ -399,6 +400,10 @@ a {
 
   .p.full, .p.second {
     font-size: 1vw;
+  }
+
+  .div-block-2 {
+    height: 34vh;
   }
 
   .heading.h1 {
@@ -454,6 +459,11 @@ a {
     padding-bottom: 0;
     padding-left: 10%;
   }
+
+  .div-block-2 {
+    width: 90vw;
+    height: 28vh;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -470,7 +480,7 @@ a {
   .menu.mobile {
     flex-direction: column;
     justify-content: space-between;
-    display: flex;
+    display: none;
     overflow: visible;
   }
 
@@ -506,6 +516,10 @@ a {
 
   .section-content {
     padding-top: 20vw;
+  }
+
+  .hero-container {
+    width: 70vw;
   }
 
   .punchline {
@@ -549,6 +563,8 @@ a {
 
   .div-block-2 {
     flex-direction: column;
+    flex: none;
+    height: auto;
   }
 
   .heading.h1 {
@@ -563,6 +579,7 @@ a {
   }
 
   .image {
+    flex: none;
     width: 100%;
     margin-bottom: 40px;
   }
@@ -572,6 +589,7 @@ a {
   }
 
   .image-2 {
+    flex: none;
     width: 100%;
     margin-bottom: 40px;
   }
@@ -614,7 +632,7 @@ a {
   }
 
   .container, .navbar {
-    color: rgba(0, 0, 0, 0);
+    color: #0000;
   }
 
   .nav-menu {
